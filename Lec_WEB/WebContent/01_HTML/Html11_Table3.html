@@ -3,8 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <title>테이블 과제</title>
+<style>
+table, th, td {
+	border: 1px solid black; /* 두께, 선종류, 선색상 */
+	border-collapse: collapse; /* border 붙이기 */
+}
+
+th, td {
+	padding: 15px; /* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+
+th {
+	text-align: left;
+}
+</style>
 </head>
 <body>
+<table style ="width:100%">
+	<tr>
+		<th colspan="2" rowspan="3"></th>
+		<th colspan="3"></th>
+	</tr>
+	<tr>
+		<td colspan="3"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
 
+<hr>
+<table style ="width:100%">
+	<tr>
+		<th colspan="2" rowspan="3"></th>
+		<th colspan="3"></th>
+	</tr>
+	<tr>
+		<td colspan="2"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+<hr>
+<table style ="width:100%">
+	<tr>
+		<th colspan="2"></th>
+		<th colspan="2" rowspan ="2"></th>
+		<th rowspan="3"></th>
+	</tr>
+	<tr>
+		<td colspan="2" ></td>
+	</tr>
+	<tr>
+		<td colspan="2"></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+<hr>
+<table height = "300px" style= "width:100%">
+	<tr>
+		<td colspan = "2" width = "5%"></td>
+		<td colspan = "2"></td>
+		<td colspan = "2" style="background-color: yellow"></td>
+		<td rowspan = "4" width= "1%"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="3" rowspan="2" style="background-color: red"></td>
+		<td colspan="2" height = "20%" width = "30%" style="background-color: yellow"></td>
+	</tr>
+	<tr>
+		<td rowspan = "2"></td>
+		<td height = "20%"></td>
+		<td height = "20%"></td>
+	</tr>
+	<tr>
+		<td colspan = "2" rowspan="2" style="background-color: black"></td>
+		<td></td>
+		<td colspan = "2"></td>
+	</tr>
+	<tr>
+		<td style="background-color: yellow"></td>
+		
+		<td></td>
+		<td colspan ="2" style="background-color: blue"></td>
+		<td style="background-color: red"></td>
+	</tr>
+</table>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
