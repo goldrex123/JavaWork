@@ -40,7 +40,7 @@ public class Array01Main {
 		korean[0] = 90;
 		korean[1] = 80;
 		korean[2] = 70;
-
+		
 		System.out.println(korean[0]);
 		System.out.println(korean[1]);
 		System.out.println(korean[2]);
