@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>주문 폼 작성</title>
+<style>
+table{
+	border: 1px solid black; /* 두께, 선종류, 선색상 */
+	border-collapse: collapse; /* border 붙이기 */
+	height: 20px;
+}
+
+td {
+	padding: 10px; /* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+</style>
+
+</head>
+<body>
+<h4>주문자 정보 입력</h2>
+<table style="width:1100px">
+	<tr>
+	<td style="width:100px">주문자 정보</td>
+	<td >비회원으로 상품구매 시 반드시 본인인증을 하셔야 합니다.<input type="button" value="휴대폰인증"><input type="button" value="아이핀인증"></td>
+	</tr>
+	<tr>
+		<td style="vertical-align:top">주소</td>
+		<td>
+			<div>
+			<input type="text" disabled style="margin: 5px"><input type="button" value="주소찾기" style= "margin:5px"><br>
+			<input type="text" disabled style="width:500px; margin:5px"><br>
+			<input type="text" style="width:500px; margin:5px">
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>휴대전화</td>
+		<td>
+		<span>
+			<select>
+			<option value="010">010</option>
+			<option value="011">011</option>
+			<option value="012">012</option>
+			</select>
+			-
+			<input type="text">
+			-
+			<input type="text">
+			<input type="checkbox">SMS수신동의
+		</span>
+		</td>
+	</tr>
+	<tr>
+		<td>이메일</td>
+		<td>
+		<span>
+			<input type="text">
+			@
+			<input type="text">
+			<select>
+				<option>직접입력</option>
+				<option>네이버</option>
+			</select>
+		</span>
+		</td>
+	</tr>
+</table>
+책임안져요
+
+<h4>배송지 정보 입력</h4>
+<table style="width:1100px">
+	<tr>
+	<td style="width:150px">배송지 선택</td>
+	<td>
+	<input type="button" value="주문자 정보와 동일" style="margin: 5px">
+	</td>
+	</tr>
+	<tr>
+		<td>받으시는 분</td>
+		<td><input type="text" style="margin:5px"></td>
+	</tr>
+	<tr>
+		<td style="vertical-align:top">주소</td>
+		<td>
+			<div>
+			<input type="text" disabled style="margin: 5px"><input type="button" value="주소찾기" style= "margin:5px">
+			<input type="checkbox">배송지목록에 추가<br>
+			<input type="text" disabled style="width:500px; margin:5px">
+			<input type="text" style="width:500px; margin:5px">
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>휴대전화</td>
+		<td>
+		<span>
+			<select>
+			<option value="010">010</option>
+			<option value="011">011</option>
+			<option value="012">012</option>
+			</select>
+			-
+			<input type="text">
+			-
+			<input type="text">
+			<input type="checkbox">안심번호 사용(무료)
+			<input type="button" value="?">
+			<input type="checkbox">집 전화 추가 입력
+		</span>
+		</td>
+	</tr>
+	<tr>
+		<td>배송시요구사항</td>
+		<td>
+		<span>
+			<input type="text">
+			{0자/50자}<br>
+			특정 배송일 원하면 전화하세요~
+		</span>
+		</td>
+	</tr>
+</table>
+
+<h4>결제 정보 입력</h4>
+<table style="width:1100px">
+	<tr>
+	<td style="width:150px">신용카드</td>
+	<td>
+	<input type="radio" name="card">신용카드(일반)
+	<input type="radio" name="card"checked>신용카드(법인)
+	<input type="radio" name="card">해외발급카드<br>
+	</td>
+	</tr>
+	<tr>
+		<td>현금결제</td>
+		<td>
+		<input type="radio" name="realmoney" checked>무통장입금       
+		<input type="radio" name="realmoney">실시간계좌이체<br>
+		</td>
+	</tr>
+	<tr>
+		<td>카드선택</td>
+		<td>
+		<select>
+			<option>선택하세요
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>할부방식</td>
+		<td>
+		<select>
+			<option>일시불
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>결제안내</td>
+		<td>
+		<span>
+			<input type="button" value="간편결제안내">
+			<input type="button" value="공인인증안내">
+			<input type="button" value="안전결제안내">
+			<input type="button" value="안심클릭안내">
+			<input type="button" value="해외발급카드안내">
+		</span>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
