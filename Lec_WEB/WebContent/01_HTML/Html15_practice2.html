@@ -4,45 +4,157 @@
 <meta charset="UTF-8">
 <title>캘린더 폼 작성</title>
 <style>
-table, td {
-	border: 1px solid black; /* 두께, 선종류, 선색상 */
-	border-collapse: collapse; /* border 붙이기 */
+
+div#div1{
+
 }
 
-td {
-	padding: 10px; /* 셀 안쪽의 컨텐트와 border 사이 여백 */
+div#firstBtn{
+	text-align: center;
+	border: 1px solid black;
+	background-color: #EAEAEA;
+	font-weight: bold;
 }
 
+span.outline{
+	display: inline-block;
+	width: 20%;
+	padding: 10px;
+}
+
+span.outline:hover{
+	color: #fff;
+	background-color: #00D8FF
+}
+
+div#div2{
+	text-align: center;
+	padding:20px;
+}
+
+div#div2 span{
+	font-size: 50px;
+}
+
+div#div2 span.time{
+	color: #6799FF;
+}
+
+div#div3{
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 5px;
+}
+
+div#div3 input{
+	margin: 8px;
+}
+
+div#div4{
+	margin-bottom: 20px;
+}
+
+div#div4 table, div#div4 th, div#div4 td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+div#div4 tr#date{
+	background-color: #D5D5D5;
+}
+
+div#div4 table,td, th{
+	padding: 10px;
+}
+
+div#div4 td.nondate{
+	background-color: #EAEAEA;
+}
+
+div#div4 td:hover{
+	background-color: #00D8FF;
+}
+
+div#div5 span.an1{
+	color: #FF0000;
+}
+div#div5 span.an{
+	font-weight: bold;
+}
+
+table#table1{
+	border-top: 3px solid black;
+	border-collapse: collapse;
+}
+table#table1 td, table#table1 th{
+	border-bottom: 1px solid black;
+	text-align: center;
+	
+}
+
+table#table1 span{
+	border: 1px solid red;
+	color: #ff0000;
+}
+
+div#div6 input{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	left: 40%;
+}
+
+div#div6 a{
+	margin: 5px;
+	padding: 5px;
+	text-decoration: none;
+	position: relative;
+	left: 40%;
+}
+
+div#div6 a:hover{
+	color: #fff;
+	background-color: #5CD1E5;
+}
+
+div#div7{
+	border-top: 1px solid black;
+	background-color: #AAAAAA;
+	height: 500px;
+}
+
+div#div7 select, div#div7 input{
+	position: relative;
+	left: 35%;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+}
 </style>
 </head>
 <body>
-	<table style="width: 1200px">
-		<tr>
-			<td><input type="button" value="정책차림표	" style="width: 290px">
-				<input type="button" value="미리보는 지원사업" style="width: 290px">
-				<input type="button" value="마감임박 지원사업" style="width: 290px">
-				<input type="button" value="접수중인 지원사업" style="width: 290px">
-			</td>
-		</tr>
-		<tr>
-			<td style="text-align: center">&lt2015-06-17&gt</td>
-		</tr>
-		<tr>
-			<td>
-			<span> 
-			<input type="radio" name="menu" checked>전체
-			<input type="radio" name="menu">창업 벤처
-			<input type="radio" name="menu">소상공인
-			<input type="radio" name="menu">판로 수출
-			<input type="radio" name="menu">R&D
-			<input type="radio" name="menu">금융 세제
-			<input type="radio" name="menu">인력
-			</span>
-			</td>
-		</tr>
-		<tr>
-			<table style="width:1200px; height:300px">
-				<tr>
+	<div id="div1">
+		<div id="firstBtn"> 
+			<span class="outline">정책차림표</span>
+			<span class="outline">미리보는 지원사업</span>
+			<span class="outline">마감임박 지원사업</span>
+			<span class="outline">접수중인 지원사업</span>
+		</div>
+		
+		<div id="div2"><span>&lt</span><span class="time">2015-06-17</span><span>&gt</span></div>
+		<div id="div3">
+			<input type="radio" name="selectList" checked>전체
+			<input type="radio" name="selectList">창업˚벤처
+			<input type="radio" name="selectList">소상공인
+			<input type="radio" name="selectList">판로˚수출
+			<input type="radio" name="selectList">R&D
+			<input type="radio" name="selectList">금융˚세제
+			<input type="radio" name="selectList">인력
+		</div>
+		
+		<div id="div4">
+			<table style="width:100%">
+				<tr id="date">
 					<th>일</th>
 					<th>월</th>
 					<th>화</th>
@@ -52,7 +164,7 @@ td {
 					<th>토</th>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="nondate"></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -91,87 +203,76 @@ td {
 					<td>28</td>
 					<td>29</td>
 					<td>30</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td class="nondate"></td>
+					<td class="nondate"></td>
+					<td class="nondate"></td>
+					<td class="nondate"></td>
 				</tr>
 			</table>
-		</tr>
+		</div>
 		
-		<tr>
-			<td>2015년 6월 7일, 전체 검색결과, 진행중인 사업은 총 614건 입니다.</td>
-		</tr>
-		<tr>
-		<table style="width:1200px">
+		<div id="div5"><span class="an1">º2015년 6월 7일, 전체 </span>검색결과, <span class="an">진행중인 사업</span>은 <span class="an1">총 614건</span>입니다.</div>
+		
+		<table id="table1" style="width:100%">
 			<tr>
-				<td>번호</td>
-				<td>지원사업명</td>
-				<td>주관부처</td>
-				<td>신청기간</td>
-				<td>조회</td>
+				<th>번호</th>
+				<th>자원사업명</th>
+				<th>주관부처</th>
+				<th>신청기간</th>
+				<th>조회</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>2015년 창조경제 벤처창업단</td>
+				<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span>ON-LINE</span></td>
 				<td>중소기업청</td>
-				<td>2015.06.04~2015.06.30</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
 				<td>731</td>
 			</tr>
 			<tr>
 				<td>10</td>
-				<td>2015년 창조경제 벤처창업단</td>
+				<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span>ON-LINE</span></td>
 				<td>중소기업청</td>
-				<td>2015.06.04~2015.06.30</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
 				<td>731</td>
 			</tr>
 			<tr>
 				<td>614</td>
-				<td>2015년 창조경제 벤처창업단</td>
+				<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span>ON-LINE</span></td>
 				<td>중소기업청</td>
-				<td>2015.06.04~2015.06.30</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
 				<td>731</td>
 			</tr>
 			<tr>
 				<td>614</td>
-				<td>2015년 창조경제 벤처창업단</td>
+				<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span>ON-LINE</span></td>
 				<td>중소기업청</td>
-				<td>2015.06.04~2015.06.30</td>
+				<td>2015.06.04 ~ 2015.06.30</td>
 				<td>731</td>
 			</tr>
 		</table>
-		</tr>
 		
-		<tr>
-			<td>
-			<div>
-				<input type="button" value = "&lt&lt">
-				<input type="button" value = "&lt">
-				<input type="button" value = "1">
-				<input type="button" value = "2">
-				<input type="button" value = "3">
-				<input type="button" value = "4">
-				<input type="button" value = "5">			
-				<input type="button" value = "&gt">
-				<input type="button" value = "&gt&gt">
-			</div>
-			</td>
-		</tr>
+		<div id="div6">
+			<input type="button" value="<<">
+			<input type="button" value="<">
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<input type="button" value=">">
+			<input type="button" value=">>">
+		</div>
 		
-		<tr>
-			<td>
-				<span>
-					<select>
-						<option>키워드
-						<option>키워드2
-						<option>키워드3
-					</select>
-					<input type="text">
-					<input type="button" value="검색">
-				</span>
-			</td>
-		</tr>
-	</table>
+		<div id="div7">
+			<select>
+				<option value="키워드">키워드</option>
+				<option value="키워드1">키워드1</option>
+				<option value="키워드2">키워드2</option>
+			</select>
+			<input type="text" style="width:400px">
+			<input type="button" value="검색" style="background-color: #0054FF; width="200px">
+		</div>
+	</div>
 </body>
 </html>
 

@@ -87,8 +87,8 @@ nav#top_menu a:hover{
 }
 
 #main_img{
-	width:971px;
-	height:308px;
+	width: 971px;
+	height: 308px;
 	background-image: url(../images/img_back.png);
 	background-repeat: no-repeat;
 	background-position: center top; 
@@ -99,14 +99,14 @@ nav#top_menu a:hover{
 }
 
 article#front{
-	margin:5px 0 5px 0;
+	margin: 5px 0 5px 0;
 }
 
 #solution{
-	border:solid 1px #ffffff;
-	width:910px;
-	min-height:150px;
-	background:#ebebeb;
+	border: solid 1px #ffffff;
+	width: 910px;
+	min-height: 150px;
+	background: #ebebeb;
 	padding: 10px;
 	
 	border-radius: 10px;
@@ -114,14 +114,14 @@ article#front{
 }
 
 #hosting, #security, #payment{
-	width:30%;
-	float:left;
-	padding:10px;	
+	width: 30%;
+	float: left;
+	padding: 10px;	
 }
 
 @font-face{
 	font-family: "seo";
-	src:url("../images/segoeui.eot");
+	src: url("../images/segoeui.eot");
 }
 
 #hosting h3, #security h3, #payment h3{
@@ -160,13 +160,13 @@ article#front{
 }
 
 #sec_news, #news_notice{
-	float:left;
-	width:420px;
-	margin:15px 0 0 20px;
+	float: left;
+	width: 420px;
+	margin: 15px 0 0 20px;
 }
 
 #sec_news h3, #news_notice h3{
-	font-family:seo;
+	font-family: seo;
 	font-size: 14px;
 	font-style: italic;
 	font-weight: normal;
