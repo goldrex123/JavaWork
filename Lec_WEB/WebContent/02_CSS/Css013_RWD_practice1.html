@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* RWD 필수 */
+        }
+
+        div.clear {
+            clear: both;
+        }
+
+        .diva {
+            background-color: #D1B2FF;
+            padding: 15px;
+            display: none;
+        }
+
+        .divb {
+            background-color: purple;
+            padding: 15px;
+        }
+
+        .divc {
+            background-color: cyan;
+            padding: 15px;
+        }
+
+        .divd {
+            border: 1px solid black;
+            padding: 15px;
+            height: 200px;
+        }
+
+        .div1e {
+            background-color: rosybrown;
+            padding: 15px;
+        }
+
+        .div1f {
+            background-color: seagreen;
+            padding: 15px;
+        }
+
+        .div1g {
+            background-color: #FFC19E;
+            padding: 15px;
+        }
+
+        .divh {
+            background-color: orange;
+            padding: 15px;
+        }
+
+        [class *="div"] {
+            float: left;
+            width: 100%;
+        }
+
+        [class *="div1"] {
+            width: 33.33%;
+        }
+
+        @media screen and (min-width: 600px) {
+            .col-m-1 {
+                width: 8.33%;
+            }
+
+            /* 1칸 짜리 폭 */
+
+            .col-m-2 {
+                width: 16.66%;
+                display: block;
+            }
+
+            .col-m-21 {
+                width: 16.66%;
+                height: 200px;
+            }
+
+            .col-m-22 {
+                width: 16.66%;
+                height: 100px;
+            }
+
+            .col-m-3 {
+                width: 25%;
+            }
+
+            .col-m-4 {
+                width: 33.33%;
+            }
+
+            .col-m-5 {
+                width: 41.66%;
+            }
+
+            .col-m-6 {
+                width: 50%;
+            }
+
+            .col-m-7 {
+                width: 58.33%;
+            }
+
+            .col-m-8 {
+                width: 66.66%;
+            }
+
+            .col-m-9 {
+                width: 75%;
+            }
+
+            .col-m-10 {
+                width: 83.33%;
+            }
+
+            .col-m-11 {
+                width: 91.66%;
+            }
+
+            .col-m-12 {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .col-1 {
+                width: 8.33%;
+            }
+
+            /* 1칸 짜리 폭 */
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            /* 2칸 짜리 폭 */
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+                display: block;
+            }
+
+            .col-41{
+                width: 33.33%;
+                height: 66px;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="diva col-m-2 col-4">A</div>
+    <div class="divb col-m-10 col-8">B</div>
+    <div class="divc col-m-21 col-2">C</div>
+    <div class="divd col-m-8 col-6">D</div>
+    <div class="div1e col-m-22 col-41">E</div>
+    <div class="div1f col-m-22 col-41">F</div>
+    <div class="div1g col-m-3 col-41">G</div>
+    <div class="divh col-m-9 col-12">H</div>
+
+</body>
+
+</html>

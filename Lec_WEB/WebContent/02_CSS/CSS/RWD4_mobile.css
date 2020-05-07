@@ -16,7 +16,7 @@
 	768px 보다 큰 기기에서 ~~한 스타일 적용
 */
 
-
+    
 /* 기본 스타일 mobile fisrt */
 [class*="col-"] {
     float: left;
