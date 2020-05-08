@@ -108,7 +108,7 @@ console.log(fruits.toString())
 fruits.splice(1, 3)
 console.log(fruits.toString())
 
-// slic() 
+// slice() 
 // 배열의 일부분만 추출, 원본에는 영향 안줌 
 console.log(fruits.slice(1, 3)) // 1부터 3전까지
 console.log(fruits.slice(1)) //1부터 끝까지

@@ -67,13 +67,13 @@ console.log('isTrue =', isTrue, typeof isTrue)
 console.log()
 
 function printName(person){
-    console.log('이름은', person.name)
+    console.log('이럼은', person.name)
 }
 
 let myBrother = {name : "John"}
 
 printName(myBrother)
-// printName() //에러다 undefined 값이 person에 넘겨짐
+printName() //에러다 undefined 값이 person에 넘겨짐
 
 //함수 정의할 떄 매개변수 체크 필요
 function printName(person){
@@ -82,7 +82,7 @@ function printName(person){
     //if(person === undefined || person === null) return;
     if(!person) return;
 
-    console.log('이름은', person.name)
+    console.log('이름', person.name)
 }
 
 printName(myBrother)

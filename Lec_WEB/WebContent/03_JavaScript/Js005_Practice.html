@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JSON 데이터 다루기</title>
+	<style>
+		table,
+		td,
+		th {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		th{
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<script src="JS/Js006_Data.js"></script>
+
+<body>
+
+	<script>
+		document.write(x.items.length + "개의 매물이 있습니다<br>");
+		document.write("<table>\n")
+		document.write("<tr>\n")
+		document.write("<th>No</th>")
+		document.write("<th>타이틀</th>")
+		document.write("<th>월세</th>")
+		document.write("<th>보증금</th>")
+		document.write("</tr>\n")
+		for (i = 0; i < x.items.length; i++) {
+			document.write("<tr>\n")
+			document.write("<td>" + (i + 1) + "</td>")
+			document.write("<td>" + x.items[i].item.title + "</td>")
+			document.write("<td>" + x.items[i].item.rent + "</td>")
+			document.write("<td>" + x.items[i].item.deposit + "</td>")
+			document.write("</tr>\n")
+		}
+		document.write("</table>\n")
+	</script>
+
+
+</body>
+
+</html>
