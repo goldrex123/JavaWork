@@ -1,0 +1,63 @@
+body {
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+div#topDiv {
+    height: 800px;
+    background-image: url(../img/netfliexBatang.jpg);
+    background-repeat: no-repeat;
+    border-bottom: 5px solid #333;
+}
+
+div#topDiv svg{
+    margin: 25px;
+}
+
+div#topDiv .topDiv{
+    float: right;
+    padding: 35px;
+}
+
+div#topDiv .top{
+    color: white;
+    text-decoration: none;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: red;
+    padding: 10px;
+    margin: 15px;
+}
+
+div#tacDiv h2{
+    padding-top: 50px;
+    font-size: 55px;
+    text-align: center;
+    color: white;
+}
+
+div#tacDiv p{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+div#tacDiv input[type=text]{
+    position: absolute;
+    left: 34%;
+    width: 500px;
+    padding: 20px;
+    margin: 0;
+}
+
+div#tacDiv input[type=button]{
+    position: absolute;
+    left: 62.5%;
+    color: white;
+    background-color: red;
+    border: 0px;
+    padding: 20px;
+    margin: 0;
+}

@@ -40,13 +40,51 @@ DOM event 객체
 <div id="demo">이벤트 없어요</div><br>
 <button id="add_event">이벤트 추가</button>
 <button id="remove_event">이벤트 삭제</button>
+<p id="event"></p>
 
 <script>
 var demoBox = document.getElementById("demo");
 var addButton = document.getElementById("add_event"); 
 var removeButton = document.getElementById("remove_event");
 
-// TODO
+function clickHander(event){
+	document.getElementById('event').innerHTML = event.type + ' ' + event.target;
+
+	var bgcolor = demoBox.style.background;
+
+	if(bgcolor != 'greenyellow'){
+		demoBox.style.background = 'greenyellow';
+	} else {
+		demoBox.style.background = 'yellow'
+	}
+}
+
+function mouseOverHandler(event){
+	document.getElementById('event').innerHTML = event.type + ' ' + event.target;
+	demoBox.style.outline = "3px solid red";
+}
+
+addButton.addEventListener("click", function(){
+	demoBox.addEventListener("click", clickHander); //이벤트 등록
+	demoBox.innerHTML = "클릭해보세요";
+
+	//onXXXX() attribute 사용하여 이벤트 등록
+	demoBox.onmouseover = mouseOverHandler;
+	demoBox.onmouseout = function(event){
+		demoBox.style.outline = "";
+	};
+
+}); // 이벤트 발생하면 해당 함수 수행
+
+removeButton.addEventListener("click", function(){
+	demoBox.removeEventListener("click", clickHander); //이벤트 해제
+
+	//onXXXX() attribute 사용하여 이벤트 해제
+	demobox.onmouseover = undefined; // 이벤트 삭제
+	demobox.onmouseout = undefined; // 이벤트 삭제 
+	
+});
+
 
 </script>
 
@@ -54,9 +92,20 @@ var removeButton = document.getElementById("remove_event");
 <p id="windowSize"></p>
 
 <script>
+/*
+	window.addEventListener("resize", function(){
+		document.getElementById('windowSize').innerHTML = window.innerWidth + " x " + window.innerHeight;
+	});
+	*/
 
-// TODO
+	window.onresize = function(){
+		document.getElementById('windowSize').innerHTML = window.innerWidth + " x " + window.innerHeight;
+	};
 
+	//페이지 '전체' 로딩 완료 후 
+	window.onload = function(){
+		document.getElementById('windowSize').innerHTML = window.innerWidth + " x " + window.innerHeight;
+	}
 </script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

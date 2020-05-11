@@ -15,26 +15,28 @@ element.addEventListener("이벤트", 함수, useCapture)
 https://javascript.info/bubbling-and-capturing
 
 
-window.event 객세 사용
+window.event 객체 사용
 	event.stopPropagation();
 
 
 -->
 <body>
 <ul>
-  <li onclick="/*TODO*/">Coffee</li>
-  <li onclick="/*TODO*/">Tea
+  <li onclick="show(this)">Coffee</li>
+  <li onclick="show(this)">Tea
     <ul>
-      <li onclick="/*TODO*/">Black tea</li>
-      <li onclick="/*TODO*/">Green tea</li>
+      <li onclick="event.stopPropagation(); show(this)">Black tea</li>
+      <li onclick="show(this)">Green tea</li>
     </ul>
   </li>
   <li>Milk</li>
 </ul>
 
 <script>
-
-// TODO
+function show(e){
+  // text만 보이기
+  alert(e.childNodes[0].nodeValue);
+}
 
 </script>
 
@@ -51,8 +53,23 @@ window.event 객세 사용
 </ul>
 
 <script>
+// 위 <li> 클릭하면 show(this) 가 작동되도록 이벤트
+var elements = document.querySelectorAll('ul#ad li');
 
-// TODO
+
+
+for(i = 0; i<elements.length; i++){
+    // elements[i].addEventListener('click', function(){
+    //   show(this);
+    // }); //bubbling 방식 (target으로부터 상위로 가는 방식)
+
+    elements[i].addEventListener('click', function(){
+      show(this);
+    }, true); //capturing 방식 (상위 부터 시작해서 target 까지 가는 방식)
+    
+}
+
+
 
 </script>
 
