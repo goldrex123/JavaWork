@@ -1,9 +1,17 @@
+* {
+    box-sizing: border-box;
+    /* RWD 필수 */
+}
+
 body {
     background-color: #000000;
     padding: 0;
     margin: 0;
 }
 
+div.clear{
+    clear: both;
+}
 div#topDiv {
     height: 800px;
     background-image: url(../img/netfliexBatang.jpg);
@@ -11,8 +19,14 @@ div#topDiv {
     border-bottom: 5px solid #333;
 }
 
+div#backDiv{
+    background-color:rgba(0, 0,0,0.5);
+    height: 100%;
+    
+}
 div#topDiv svg{
     margin: 25px;
+    float: left;
 }
 
 div#topDiv .topDiv{
@@ -20,6 +34,10 @@ div#topDiv .topDiv{
     padding: 35px;
 }
 
+div#topDiv .topDiv a{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
 div#topDiv .top{
     color: white;
     text-decoration: none;
@@ -44,20 +62,66 @@ div#tacDiv p{
     color: white;
 }
 
+div#tacDiv h3{
+    text-align: center;
+    color: white;
+}
+
 div#tacDiv input[type=text]{
-    position: absolute;
-    left: 34%;
+    position: relative;
+    left: 30%;
     width: 500px;
     padding: 20px;
     margin: 0;
 }
 
 div#tacDiv input[type=button]{
-    position: absolute;
-    left: 62.5%;
+    position: relative;
+    left: 30%;
     color: white;
     background-color: red;
     border: 0px;
     padding: 20px;
-    margin: 0;
+    top: 1px;
+}
+
+div#midDiv{
+    border-bottom: 4px solid #333;
+    padding: 20px;
+}
+
+div#midtDiv{
+    margin: 15px;
+    padding: 10px;
+}
+
+div#midtDiv .advice{
+    display: inline-block;
+    color: white;
+    position: relative;
+    margin: 30px;
+    padding: 10px;
+}
+
+div#midtDiv #tvDiv{
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    width: 60%;
+    height: auto;
+    height: 600px;
+}
+
+div#midtDiv #tvDiv .our-story-card-img{
+    float: left;
+    position: relative;
+    bottom: 300px;
+    left: 150px;
+}
+
+div#midtDiv #tvDiv .our-story-card-video{
+    position: relative;
+    left: 230px;
+    top: 120px;
+    
 }
