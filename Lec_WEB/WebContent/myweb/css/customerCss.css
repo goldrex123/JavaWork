@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+    border-top: 10px solid #333;
+    border-bottom: 10px solid #333;
+
+}
+
+div.clear{
+    clear: both;
+}
+
+div#container{
+    padding: 100px 230px;
+
+}
+
+div#container .subject h1{
+    color: white;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+div#container .listDiv{
+    color: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 1000px;
+}
+
+div#container .listDiv .questionBtn{
+    background-color: #333;
+    border: none;
+    text-align: left;
+    color: white;
+    font-size: 2em;
+    padding: 15px;
+
+    width: 900px;
+    position: relative;
+}
+
+div#container .listDiv svg{
+    width: 30px;
+    height: 30px;
+    float: right;
+    fill: white;
+    transform: rotate(45deg);
+}
+div#container .explainDiv{
+    height: auto;
+    margin-top: 10px;
+}
+div#container .explain{
+    display: none;
+    background-color: #333;
+    font-size: 20px;
+    padding: 15px;
+    width: 900px;
+    position: relative;
+}
