@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+div.clear{
+    clear: both;
+}
+
+div#container {
+    height: 1080px;
+    background-image: url(../img/netfliexBatang.jpg);
+    background-repeat: repeat-x;
+}
+
+div#backDiv{
+    background-color:rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+}
+
+div#topDiv svg{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+div#formDiv{
+    width: 50%;
+    margin:50px auto;
+    color: white;
+}
+
+.loginForm{
+    background-color: #333;
+}

@@ -50,8 +50,8 @@ $(document).ready(function(){
         
         // 한꺼번에 여러가지 css 값을 읽어 올수도 있다
         
-        var cssObj = $("#test1").css(["color", "backgroundColor"]);
-        alert('css(): ' + cssObj.color + " ++ " + cssObj.backgroundColor);
+        var cssObj = $(".c1").css("display");
+        alert('css(): ' + cssObj);
     });
 
     // 2. Set
@@ -156,7 +156,7 @@ $(document).ready(function(){
 
 <h2>Callback 함수</h2>
 <p class="c1" title="월">c1 월요일</p>
-<p class="c1" title="화">c1 화요일</p>
+<span class="c1" title="화">c1 화요일</span>
 <p class="c1" title="수">c1 수요일</p>
 <p class="c1" title="목">c1 목요일</p>
 <p class="c1" title="금">c1 금요일</p>

@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -24,11 +26,12 @@ div#container .subject h1{
     color: white;
     text-align: center;
     font-size: 3.5em;
+    min-width: 1000px;
 }
 
 div#container .listDiv{
     color: white;
-    margin: 30px auto;
+    margin: -2px auto;
     padding: 30px;
     width: 1000px;
 }
@@ -40,27 +43,32 @@ div#container .listDiv .questionBtn{
     color: white;
     font-size: 2em;
     padding: 15px;
-
+    margin: 10px;
     width: 900px;
     position: relative;
 }
 
-div#container .listDiv svg{
+div#container .listDiv .ximg{
+    display: inline-block;
     width: 30px;
     height: 30px;
-    float: right;
+    position: relative;
     fill: white;
     transform: rotate(45deg);
+    float: right;
 }
 div#container .explainDiv{
-    height: auto;
-    margin-top: 10px;
+    width: 900px;
+    margin: 10px;
 }
+
 div#container .explain{
     display: none;
     background-color: #333;
     font-size: 20px;
     padding: 15px;
     width: 900px;
-    position: relative;
+}
+
+
 }

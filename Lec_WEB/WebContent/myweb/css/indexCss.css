@@ -52,6 +52,18 @@ div#backDiv .logoDiv a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#loginBtn{
+    background-color: red;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    border-radius: 4px;
+    margin: 0px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 div#backDiv .midDiv{
     padding: 50px;
     height: 90%;
