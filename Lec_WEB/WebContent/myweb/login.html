@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/loginCss.css" rel="stylesheet" type="text/css">
-<title>Login Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/loginJQ.js" type="text/javascript"></script>
+
+<title>Login</title>
 
 </head>
 <body>
@@ -24,9 +27,55 @@
             </div>
 
             <div id="formDiv">
-                <form class="loginForm">
-                    <h2>로그인</h2>
+                <div class="innerDiv">
+                <form class="loginForm" >
+                    <h1>로그인</h1>
+                    <input class="login" type="text" placeholder="이메일 주소 또는 전화번호">
+                    <span class="formid"></span>
+                    <input class="login" type="password" placeholder="비밀번호">
+                    <span class="formpw"></span>
+                    <input type="button" value="로그인" onclick="chkForLogin()">
+                    <input type="checkbox" id="login-save" checked/>
+                    <label for="login-save">로그인 정보 저장</label>
+                    <a class="help" href="#">도움이 필요하신가요?</a>
                 </form>
+
+                <div id="login-advice">
+                    <a class="facebook" href="#">
+                    <img class="facebook-logo" src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png" alt="페이스북 로고"
+                        width="20px", height="20px">
+                    <span class="facebook-login">Facebook으로 로그인</span>
+                    </a>
+                    <div class="advicer">
+                        <span class="advicer-f">NetFlix 회원이 아니신가요??</span>
+                        <a href="#">지금 가입하세요!</a>
+                        <div class="advicer-d">
+                            <h4 class="sub">이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.</h4>
+                            <a href="#">자세히 알아보기</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="footer-inner">
+                    <div class="footer-inDiv">
+                        <h3 class="footer-f">질문이 있으신가요? 고객센터에 문의하세요!</h3>
+                        <div class="footer-s">
+                            <a class="footer-s-a" href="#">기프트 약관</a>
+                            <a class="footer-s-a" href="#">이용 약관</a>
+                            <a href="#">개인정보 처리방침</a>
+                        </div>
+
+                        <div class="footer-lan">
+                            <select id="language-select">
+                                <option>한국어</option>
+                                <option>English</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

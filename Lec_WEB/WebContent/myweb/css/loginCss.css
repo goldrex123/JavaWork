@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-div.clear{
+div.clear {
     clear: both;
 }
 
@@ -18,23 +18,206 @@ div#container {
     background-repeat: repeat-x;
 }
 
-div#backDiv{
-    background-color:rgba(0,0,0,0.5);
+div#backDiv {
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
 }
 
-div#topDiv svg{
+div#topDiv svg {
     margin-top: 30px;
     margin-left: 50px;
 }
 
-div#formDiv{
-    width: 50%;
-    margin:50px auto;
+div#formDiv {
+    width: 570px;
+    margin: 50px auto;
     color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
 }
 
-.loginForm{
+.loginForm {
+    padding: 0 70px;
+    padding-top: 70px;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.innerDiv {
+    width: 100%;
+    height: 100%;
+}
+
+.loginForm input.login {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
     background-color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.loginForm input.login:focus {
+    border-bottom: 5px solid orange;
+
+}
+
+.loginForm input[type=button] {
+    background-color: red;
+    border: 1px solid red;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.loginForm input[type=button]:hover {
+    opacity: 0.6;
+    border: 1px solid orange;
+}
+input[type="checkbox"] {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0 none;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+label {
+    height: 15px;
+    line-height: 15px;
+    padding-left: 20px;
+    display: inline-block;
+    background: url(http://hcs1105.com/wp/wp-content/themes/hcs1105/images/checkbox1.png) no-repeat 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label {
+    background-position: 0 -15px;
+}
+
+.loginForm .help {
+    text-decoration: none;
+    color: #999;
+    float: right;
+}
+
+.help:hover {
+    text-decoration: underline;
+}
+
+div#login-advice {
+    padding: 0 70px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+div#login-advice a.facebook {
+    text-decoration: none;
+}
+
+.facebook-logo {
+    margin-right: 5px;
+}
+
+div#login-advice span.facebook-login {
+    color: #999
+}
+
+.advicer {
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.advicer span.advicer-f {
+    display: inline-block;
+    color: #999;
+    margin: 10px 0px;
+    font-size: 1.1em;
+}
+
+.advicer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+div.advicer a:hover {
+    text-decoration: underline;
+}
+
+div.advicer .advicer-d {
+    width: 100%;
+    color: #999;
+}
+
+.advicer-d h4.sub {
+    display: inline;
+    overflow: hidden;
+}
+
+.advicer-d a {
+    color: blue;
+}
+
+div#footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 230px;
+    height: 300px;
+}
+
+div.footer-inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-inDiv {
+    width: 710px;
+}
+
+.footer-f {
+    color: #777;
+}
+
+
+.footer-s {
+    width: 100%;
+}
+
+.footer-s a {
+    color: #777;
+    text-decoration: none;
+}
+
+.footer-s a.footer-s-a {
+    margin-right: 200px;
+}
+
+.footer-s a:hover {
+    text-decoration: underline;
+}
+
+.footer-lan{
+    margin-top: 20px;
+}
+
+#language-select{
+    background-color: black;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #999;
 }
