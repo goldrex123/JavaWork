@@ -23,6 +23,7 @@ $(document).ready(function(){
         ex.css('margin-bottom', '10px');
         ex.slideToggle("fast");
         $('.explain').not(ex).css('display', 'none');
+        $('.ximg').not(ximg).css('transform', 'rotate(45deg)')
         
         $(".explainDiv").css('margin-top', 0)
     });

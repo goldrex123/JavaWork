@@ -7,6 +7,21 @@ $(document).ready(function () {
     $(slide).first().next('.card').next('.card').addClass('smaller nextSmall');
 
 
+    var url = "../myweb/js/imgData.js"
+
+    $('.logout').click(function(){
+        alert('로그아웃 성공!')
+    });
+
+    $.ajax({
+        url: url,
+        type: "GET",
+        cache: false,
+        success: function(data, status){
+            // console.log(status)
+            if(status == "success") parseJSON();
+        } 
+    })
 
     $('.next-btn').click(function (e) {
         e.preventDefault();
@@ -20,7 +35,7 @@ $(document).ready(function () {
         $(Next).addClass('active-img').removeClass('small next');
         $(Prev).addClass('smaller prevSmall ').removeClass('small prev ');
         $(SmallNext).addClass('small next').removeClass('smaller nextSmall ');
-        $(SmallPrev).removeClass('prevSmall').addClass('nextSmall');
+        $(SmallPrev).addClass('nextSmall').removeClass('prevSmall');
 
     });
     $('.prev-btn').click(function (e) {
@@ -41,27 +56,96 @@ $(document).ready(function () {
 
     $('.card').click(function(e){
         e.preventDefault();
-        // var Active = $('.active-img'),
-        //     Prev = $('.prev'),
-        //     Next = $('.next'),
-        //     SmallPrev = $('.prevSmall'),
-        //     SmallNext = $('.nextSmall');
-
         
-        // $(this).addClass('active-img')
-        for(i=0; i< $('.card').length; i++){
-            if($(this).hasClass('active-img')){
-                break;
-            } else {
-                var str = $(this).attr('class');
-                console.log(str);
-                
-                $(this).addClass('active-img');
-                $(this).css('transform', 'translated(100,0,0)');
-                $('.active-img').removeClass('active-img').addClass(str);
-            }
-        }
-       
+        var str = $(this).attr("class");
+        $('.active-img').addClass(str).removeClass('active-img')
+        $(this).removeClass(str).addClass('card active-img')
+        $('.modal').css('display','block')
+
+        $('.imgcontainer').html('<img src="'+ $(' img',this).attr('src')+ '" width=100% height=500px>')
+        
+        // $.ajax({
+        //     url: url,
+        //     type: "GET",
+        //     cache: false,
+        //     success: function(data, status){
+        //         // console.log(status)
+        //         if(status == "success") parseJSONsa();
+        //     } 
+        // })
     });
 
+    $('.korean-movie').click(function(){
+        $.ajax({
+            url: url,
+            type: "GET",
+            cache: false,
+            success: function(data, status){
+                // console.log(status)
+                if(status == "success") parseJSONMovie();
+            } 
+        });
+    });
+
+    $('.favorite').click(function(){
+        $.ajax({
+            url: url,
+            type: "GET",
+            cache: false,
+            success: function(data, status){
+                // console.log(status)
+                if(status == "success") parseJSON();
+            } 
+        });
+    });
+
+    $('.close').click(function(){
+        $('.modal').css('display','none')
+    });
+
+    var modal = document.getElementById("id01");
+    var close = document.getElementsByClassName("close")[0];
+
+    window.onclick = function(event){
+        if(event.target == modal){
+            modal.style.display = "none";
+        }
+    }
+
+    $('.view').click(function(){
+        alert('즐거운 시청 되십시오');
+    })
 });
+
+function parseJSON(){
+    var row = x.item[0];
+    console.log(row)
+    var src="";
+    var submit = ""
+    var advice = ""
+	for(i = 0; i < row.img.length; i++){
+        src += '<img src="'+ row.img[i]+ '" width=100% height=100%>'
+        $(".card").eq(i).html(src);
+        src ="";
+	}
+}
+
+function parseJSONMovie(){
+	var row = x.item[1];
+    var src="";
+	for(i = 0; i < row.img.length; i++){
+        src += '<img src="'+row.img[i]+ '" width=100% height=100%>'
+        $(".card").eq(i).html(src);
+        src ="";
+	}
+}
+
+// function parseJSONsa(){
+// 	var row = x.item[0];
+//     var src="";
+// 	for(i = 0; i < row.submit.length; i++){
+//         src = row.submit[i]
+//         $(".submit").text(src);
+//         src ="";
+// 	}
+// }

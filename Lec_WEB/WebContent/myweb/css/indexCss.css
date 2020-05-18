@@ -27,6 +27,7 @@ div#backDiv{
 div#backDiv .logoDiv{
     padding: 0px;
     height: 10%;
+    overflow: hidden;
 }
 
 div#backDiv .logoDiv svg{
@@ -36,16 +37,19 @@ div#backDiv .logoDiv svg{
 } 
 
 div#backDiv .aDiv{
-    float: right;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-right: 50px;
+    float: right;
+    padding: 5px;
 }
 
 div#backDiv .logoDiv a{
     border: 1px solid red;
+    float: right;
     text-decoration: none;
     background-color: red;
     border-radius: 4px;
+    font-weight: bold;
     color: white;
     padding: 10px;
     margin: 10px;
@@ -103,7 +107,6 @@ div#backDiv .mid-content-input{
     float: right;
     position: relative;
     left: -50%;
-    
 }
 
 div#backDiv .midDiv .mid-content input[type=text]{
@@ -192,4 +195,3 @@ div.secDiv-innerDiv-imgDiv-videoDiv video{
     width: 390px;
     height: 330px;
 }
-
