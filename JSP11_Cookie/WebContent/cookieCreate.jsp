@@ -8,6 +8,12 @@
 	cookie1.setMaxAge(2*30); //쿠키 파기 시간 설정 (생성시점으로부터 2*30 초 후)
 	response.addCookie(cookie1); // response에 쿠키 정보 주기
 	
+	String cookieName3 = "num1";
+	String cookieValue3 = "123";
+	Cookie cookie3 = new Cookie(cookieName3, cookieValue3); //이름-값 으로 쿠키 구성
+	cookie3.setMaxAge(2*30); //쿠키 파기 시간 설정 (생성시점으로부터 2*30 초 후)
+	response.addCookie(cookie3); // response에 쿠키 정보 주기
+	
 	String cookieName2 = "datetime";
 	String cookieValue2 = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 	Cookie cookie2 = new Cookie(cookieName2, cookieValue2);
@@ -15,6 +21,6 @@
 	response.addCookie(cookie2);
 %>
 <script>
-alert("<%= cookieName1%>, <%= cookieName2%>쿠키 생성");
+alert("<%= cookieName1%>, <%= cookieName2%>, <%= cookieName3%>쿠키 생성");
 location.href="cookieList.jsp"
 </script>

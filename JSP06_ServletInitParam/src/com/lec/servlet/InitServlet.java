@@ -10,13 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//@WebServlet(/*urlPatterns = {"/InitS"},
+//		initParams = {
+//				@WebInitParam(name = "id", value = "test11"),
+//				@WebInitParam(name = "pw", value = "1000"),
+//				@WebInitParam(name = "local", value = "Pusan"),
+//		}*/
+//	)
 @WebServlet(urlPatterns = {"/InitS"},
-		initParams = {
-				@WebInitParam(name = "id", value = "test11"),
-				@WebInitParam(name = "pw", value = "1000"),
-				@WebInitParam(name = "local", value = "Pusan"),
-		}
-	)
+	initParams = {
+			@WebInitParam(name = "id", value ="gold"),
+			@WebInitParam(name = "pw", value ="1019"),
+			@WebInitParam(name = "local", value ="guri"),
+	}
+		)
 public class InitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

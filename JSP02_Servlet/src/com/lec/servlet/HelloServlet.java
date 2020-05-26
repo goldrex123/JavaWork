@@ -47,6 +47,7 @@ public class HelloServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
+		System.out.println("post 방식 servlet");
 	}
 
 }

@@ -158,7 +158,7 @@
 	<Context docBase="JSP04_ServletLifeCycle" path="/JSP04_ServletLifeCycle" reloadable="true" source="org.eclipse.jst.jee.server:JSP04_ServletLifeCycle"/>
 	<Context docBase="JSP05_ServletForm" path="/JSP05_ServletForm" reloadable="true" source="org.eclipse.jst.jee.server:JSP05_ServletForm"/>
 	<Context docBase="JSP06_ServletInitParam" path="/JSP06_ServletInitParam" reloadable="true" source="org.eclipse.jst.jee.server:JSP06_ServletInitParam"/>
-	<Context docBase="JSP07_ServletContext" path="/JSP07_ServletContext" reloadable="true" source="org.eclipse.jst.jee.server:JSP07_ServletContext"/>
+	<Context docBase="JSP07_ServletContext" path="/slc" reloadable="true" source="org.eclipse.jst.jee.server:JSP07_ServletContext"/>
 	<Context docBase="JSP08_TagDirective" path="/JSP08_TagDirective" reloadable="true" source="org.eclipse.jst.jee.server:JSP08_TagDirective"/>
 	<Context docBase="JSP09_ImplicitObject" path="/JSP09_ImplicitObject" reloadable="true" source="org.eclipse.jst.jee.server:JSP09_ImplicitObject"/>
 	<Context docBase="JSP10_ActionTag" path="/JSP10_ActionTag" reloadable="true" source="org.eclipse.jst.jee.server:JSP10_ActionTag"/>
@@ -171,7 +171,7 @@
 	<Context docBase="JSP17_ConnectionPool" path="/JSP17_ConnectionPool" reloadable="true" source="org.eclipse.jst.jee.server:JSP17_ConnectionPool" useNaming="true">
 		<Resource auth="Container" description="DB Connection" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="5" maxTotal="50" maxWaitMillis="5000" name="jdbc/testDB" password="tiger0316" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="scott0316"/>	
 	</Context>
-		<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/></Host>
+		<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/><Context docBase="JSP21_EL" path="/JSP21_EL" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_EL"/><Context docBase="JSP22_JSTL" path="/JSP22_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSP22_JSTL"/></Host>
     </Engine>
   </Service>
 </Server><!-- 

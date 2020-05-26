@@ -9,7 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <!-- 
+<!-- 
   <servlet>
   	<servlet-name>ServletInit</servlet-name>
   	<servlet-class>com.lec.servlet.InitServlet</servlet-class>
@@ -35,5 +35,5 @@
   	<servlet-name>ServletInit</servlet-name>
   	<url-pattern>/SI</url-pattern>
   </servlet-mapping>
-   -->
+ -->
 </web-app>

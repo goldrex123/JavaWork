@@ -17,7 +17,7 @@
 		out.println("</script>");
 		
 		String sessionName1 = "userid";
-		String sessionValue1 = userid;
+		String sessionValue1 = userid; // 이 경우 admino가 들어감.
 
 		session.setAttribute(sessionName1, sessionValue1);
 		
