@@ -61,6 +61,7 @@ $(document).ready(function(){
  
 function parseXML(xmlDOM) {
 	var table = "<tr><th>id</th><th>작성자</th><th>글제목</th><th>글내용</th><th>조회수</th><th>작성일</th></tr>";
+	console.log($(xmlDOM).find("Data"));
 	$(xmlDOM).find("Data").each(function(){
 		table += "<tr>";
 		table += "<td>" + $(this).find("uid").text() + "</td>";
