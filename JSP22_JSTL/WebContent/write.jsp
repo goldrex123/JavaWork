@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>글작성</title>
+<script src="ckeditor/ckeditor.js"></script>
 </head>
 <script>
 function chkSubmit(){ // 폼 검증
@@ -36,7 +37,15 @@ function chkSubmit(){ // 폼 검증
 제목:
 <input type="text" name="subject"/><br>
 내용:<br>
-<textarea name="content"></textarea>
+<textarea name="content" id="editor1"></textarea>
+<script>
+	CKEDITOR.replace('editor1',{
+		allowedContent: true, //HTML 태그 자동삭제 방지 설정
+		width: '640px',
+		height: '400px',
+		filebrowserUploadUrl: '${pageContext.request.contextPath}/fileUpload.do'
+	});
+</script>
 <br><br>
 <input type="submit" value="등록"/>
 </form>

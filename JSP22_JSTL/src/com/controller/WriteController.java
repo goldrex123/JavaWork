@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.command.write.Command;
 import com.command.write.DeleteCommand;
+import com.command.write.FileUploadCommand;
 import com.command.write.ListCommand;
 import com.command.write.SelectCommand;
 import com.command.write.UpdateCommand;
@@ -91,6 +92,11 @@ public class WriteController extends HttpServlet {
 			command = new DeleteCommand();
 			command.execute(request, response);
 			viewPage ="deleteOk.jsp";
+			break;
+			
+		// 웹에디터용 파일 업로드 처리
+		case "/fileUpload.do":
+			new FileUploadCommand().execute(request, response);
 			break;
 		} // end switch
 		

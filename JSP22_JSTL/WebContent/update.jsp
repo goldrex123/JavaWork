@@ -3,7 +3,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
+<script src="ckeditor/ckeditor.js"></script>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -32,7 +32,13 @@ function chkSubmit(){
 제목 : 
 <input type="text" name="subject" value="${selec[0].subject }"><br>
 내용 : <br>
-<textarea name="content">${selec[0].content }</textarea>
+<textarea name="content" id="editor1">${selec[0].content }</textarea>
+<script>
+	CKEDITOR.replace('editor1',{
+		allowedContent: true, //HTML 태그 자동삭제 방지 설정
+		filebrowserUploadUrl: '${pageContext.request.contextPath}/fileUpload.do'
+	});
+</script>
 <br>
 <input type="submit" value="수정"/>
 </form>
