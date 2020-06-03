@@ -70,6 +70,7 @@ public class WriteController extends HttpServlet {
 			command.execute(request, response);
 			viewPage = "writeOk.jsp";
 			break;
+			
 		case "/view.do":
 			command = new ViewCommand();
 			command.execute(request, response);
