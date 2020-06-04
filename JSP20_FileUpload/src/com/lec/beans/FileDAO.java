@@ -80,7 +80,6 @@ public class FileDAO {
 		} finally {
 			close();
 		}
-		
 		return arr;
 	}
 	
@@ -97,8 +96,6 @@ public class FileDAO {
 			} finally {
 				close();
 			}
-			
-			
 			return arr;
 	}
 		
@@ -233,7 +230,6 @@ public class FileDAO {
 			pstmt.setInt(3, wrUid);
 			cnt += pstmt.executeUpdate();
 		}
-		
 		return cnt;
 	}
 }

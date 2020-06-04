@@ -100,7 +100,6 @@ public class WriteDAO {
 			rs = pstmt.getGeneratedKeys();
 			if(rs.next()) {
 				uid = rs.getInt(1); // 첫 번째 컬럼 ("wr_uid")
-				
 			}
 			
 			pstmt.close();
