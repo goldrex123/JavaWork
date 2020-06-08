@@ -246,6 +246,30 @@ public class WriteDAO {
 		return cnt;
 	}
 	
+	// 특정 uid 글(들) 삭제
+	public int deleteByUid(int [] uids) throws SQLException{
+		int cnt = 0;
+		
+		if(uids == null || uids.length == 0) return 0;
+		
+		try {
+			StringBuffer sql = new StringBuffer("DELETE FROM test_write WHERE wr_uid IN(");
+			for(int i = 0; i<uids.length; i++) {
+				sql.append(uids[i] + ",");
+			}
+			sql.deleteCharAt(sql.lastIndexOf(",")); // 맨 끝의 , 삭제
+			sql.append(")");
+			
+			stmt = conn.createStatement();
+			cnt = stmt.executeUpdate(sql.toString());
+			
+		} finally {
+			close();
+		}
+		
+		return cnt;
+	}
+
 	
 }
 
