@@ -10,7 +10,7 @@
 	// ※ 사실 위 단계에서도 파라미터 검증 필요하다
 	
 	// 위 url에 추가로 붙어야 할 것들.  (옵션)
-	String add = request.getParameter("add"); 
+	String add = request.getParameter("add");
 	if(add == null){ add = ""; }
 	
 	// 페이징 버튼 링크 url 주소에 넣을 문자열 준비
