@@ -12,7 +12,7 @@ public class AjaxWriteList extends AjaxWriteResult {
 	@JsonProperty("totalpage")
 	private int totalPage;  // 총 페이지 수 
 	
-	@JsonProperty("totalcnt")
+	@JsonProperty("totalcnt")	
 	private int totalCnt; // 데이터(글) 수
 	
 	@JsonProperty("writepages")
