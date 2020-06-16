@@ -19,25 +19,44 @@ public class CategoryListCommand implements Command {
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		StringBuffer message = new StringBuffer();
 		String status = "FAIL";
-		int depth = 1;
-		int parent = 0;
-		
-		depth = Integer.parseInt(request.getParameter("depth"));
-		parent = Integer.parseInt(request.getParameter("uid"));
-		
+		int depth;
+		int parent;
 		CategoryDAO dao = new CategoryDAO();
 		CategoryDTO[] arr = null;
-		try {
-			arr = dao.SelectByCategory(depth, parent);
-			
-			if(arr == null) {
-				message.append("[리스트 할 데이터가 없습니다]");
-			} else {
-				status = "OK";
-			}
-		} catch (SQLException e1) {
-			e1.printStackTrace();
+		
+		String param = request.getParameter("depth");
+		if(param == null || param.trim().length() == 0) {
+			depth = 1;
+		} else {
+			depth= Integer.parseInt(param);
 		}
+		if(depth == 1) {
+			parent = 0;
+		}
+		param = request.getParameter("uid");
+		
+		if(param == null || param.trim().length() == 0) {
+			parent = 0;
+		} else {
+			parent = Integer.parseInt(param);
+		}
+		
+		if(depth >= 2 && parent == 0) {
+			message.append("0개의 데이터");
+		} else {
+			try {
+				arr = dao.SelectByCategory(depth, parent);
+				
+				if(arr == null) {
+					message.append("[리스트 할 데이터가 없습니다]");
+				} else {
+					status = "OK";
+				}
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+		
 		
 		AjaxCategory result = new AjaxCategory();
 		
