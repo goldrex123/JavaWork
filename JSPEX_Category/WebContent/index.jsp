@@ -11,6 +11,7 @@
 <title>다단계 카테고리 - select 하기</title>
 </head>
 <body>
+<h2>다단계 카테고리 -select하기</h2>
 <div class="cate" id="mycate">
 <span>
 	<select id='first' disabled></select>

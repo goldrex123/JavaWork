@@ -6,12 +6,25 @@ $(document).ready(function(){
 	
 	
 	$("#first").change(function(){
+		console.log($('#first option:selected').val());
+		if($('#first option:selected').val() == '선택하세요---'){
+			$('#second').attr('disabled', true);
+			$('#second').html("");
+			$('#third').attr('disabled', true);
+			$('#third').html("");
+			return ;
+		}
 		viewItem = "uid="+$('#first option:selected').attr('data-uid')+"&depth="+(parseInt($('#first option:selected').attr('data-depth'))+1);
 		console.log(viewItem);
 		loadPage();
 	});
 	
 	$("#second").change(function(){
+		if($('#second option:selected').val() == '선택하세요---'){
+			$('#third').attr('disabled', true);
+			$('#third').html("");
+			return ;
+		}
 		viewItem = "uid="+$('#second option:selected').attr('data-uid')+"&depth="+(parseInt($('#second option:selected').attr('data-depth'))+1);
 		console.log(viewItem);
 		loadPage();
