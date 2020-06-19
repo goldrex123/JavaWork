@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:annotation-config/>
+<!--
+	 2개의 operand 빈 생성 .
+	 
+	 plus op 에서 자동 주입 받아서 dooperator 구현
+ -->
+	<bean id="operand1" class="ex3_1.Operand">
+		<constructor-arg value="5"/>
+		<qualifier value="operand1"/>
+	</bean>
+	
+	<bean id="operand2" class="ex3_1.Operand">
+		<constructor-arg value="3"/>
+		<qualifier value="operand2"/>
+	</bean>
+	
+	<bean id="operator1" class="ex3_1.PlusOp"/>
+
+</beans>
