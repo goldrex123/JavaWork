@@ -12,7 +12,7 @@ public class ProfileMain4 {
 		// 현재 활성화할 프로필 셋팅
 		ctx.getEnvironment().setActiveProfiles(config);
 		
-		// 해당 profile 의 설정파일만 설정 된다.
+		// 해당 profile 의 설정파일만 설정 된다.	
 		ctx.load("appCtx4_dev.xml", "appCtx4_run.xml");
 		ctx.refresh();
 		
