@@ -20,7 +20,6 @@ public class ProfileMain4 {
 		System.out.println("ip : " + info.getIpNum());
 		System.out.println("port : " + info.getPortNum());
 		
-		
 		ctx.close();
 	}
 }
