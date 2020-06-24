@@ -32,7 +32,7 @@ function chkSubmit(){ // 폼 검증
 <%-- 글 내용이 많을수 있기 때문에 POST 방식 사용 --%>
 <form name="frm" action="writeOk" method="post" onsubmit="return chkSubmit()">
 작성자:
-<input type="text" name="name" value="장윤성"/><br>
+<input type="text" name="name" value="김준영"/><br>
 제목:
 <input type="text" name="subject" value="와 점심이다"/><br>
 내용:<br>
