@@ -5,8 +5,8 @@ import java.util.Map;
 
 import org.springframework.ui.Model;
 
-import com.lec.sts15_mybatis.board.beans.BWriteDAO;
-import com.lec.sts15_mybatis.board.beans.BWriteDTO;
+import com.lec.sts15_mybatis.board.C;
+import com.lec.sts15_mybatis.board.beans.IWriteDAO;
 
 public class BSelectCommand implements BCommand {
 
@@ -15,9 +15,14 @@ public class BSelectCommand implements BCommand {
 		Map<String, Object> map = model.asMap();
 		
 		int uid = (Integer)map.get("uid");
-		BWriteDAO dao = new BWriteDAO();
-		BWriteDTO dto = dao.SelectByUid(uid);
-		model.addAttribute("list", Arrays.asList(dto));
+		
+//		BWriteDAO dao = new BWriteDAO();
+//		BWriteDTO dto = dao.SelectByUid(uid);
+//		model.addAttribute("list", Arrays.asList(dto));
+		
+		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
+		model.addAttribute("list", Arrays.asList(dao.SelectByUid(uid)));
+		
 	}
 
 }
