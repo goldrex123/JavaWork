@@ -23,7 +23,6 @@ import com.lec.sts15_mybatis.board.command.BWriteCommand;
 public class BoardController {
 	
 	private BCommand command;
-//	private JdbcTemplate template;
 	
 	//Mybatis 용 
 	private SqlSession sqlSession;
@@ -33,13 +32,6 @@ public class BoardController {
 		System.out.println("BoardController() 생성");
 	}
 
-//	@Autowired
-//	public void setTemplate(JdbcTemplate template) {
-//		System.out.println("setTemplate() 호출");
-//		this.template = template;
-//		C.template = template;
-//	}
-	
 	@Autowired
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;

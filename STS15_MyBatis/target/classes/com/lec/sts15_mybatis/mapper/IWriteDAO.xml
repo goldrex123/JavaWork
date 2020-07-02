@@ -11,19 +11,20 @@
 		ORDER BY wr_uid DESC
 	</select>
 	
-	<!-- <insert id="insert" flushCache="true" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+	<insert id="insert" flushCache="true" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO" 
+		keyProperty="uid" useGeneratedKeys="true" keyColumn="wr_uid">
 		INSERT INTO test_write 
 		(wr_uid, wr_subject, wr_content, wr_name) 
 		VALUES 
 		(test_write_seq.nextval, #{subject}, #{content}, #{name})
-	</insert> -->
+	</insert> 
 	
-	<insert id="insert" flushCache="true">
+	<!-- <insert id="insert" flushCache="true">
 		INSERT INTO test_write 
 		(wr_uid, wr_subject, wr_content, wr_name) 
 		VALUES 
 		(test_write_seq.nextval, #{param1}, #{param2}, #{param3})
-	</insert>
+	</insert> -->
 	
 	<update id="incViewCnt" flushCache="true">
 		UPDATE test_write 
@@ -38,14 +39,30 @@
 		WHERE wr_uid = #{param1}
 	</select>
 	
-	<update id="update" flushCache="true" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+	<!--  <update id="update" flushCache="true" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
 		UPDATE test_write 
 		SET wr_subject = #{subject}, wr_content = #{content} 
 		WHERE wr_uid = #{uid}
+	</update>  -->
+	
+	<update id="update" flushCache="true">
+		UPDATE test_write 
+		SET wr_subject = #{a.subject}, wr_content = #{a.content} 
+		WHERE wr_uid = #{param1}
 	</update>
+	
 	
 	<delete id="deleteByUid" flushCache="true">
 		DELETE FROM test_write 
 		WHERE wr_uid = #{param1}
 	</delete>
+	
+	<!-- <select id="searchBySubject" resultType="com.lec.sts15_mybatis.board.beans.BWriteDTO"></select> -->
 </mapper>
+
+
+
+
+
+
+

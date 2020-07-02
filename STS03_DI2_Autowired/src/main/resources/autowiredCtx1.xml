@@ -12,7 +12,7 @@
 	</bean> -->
 	
 	<bean id="dao1" class="com.lec.beans.DAOEx">
-		<constructor-arg value="DAO_EX"/>
+		<constructor-arg value="DAO_EX1"/>
 	</bean>
 	
 	<bean id="regService" class="com.lec.beans.RegisterService">

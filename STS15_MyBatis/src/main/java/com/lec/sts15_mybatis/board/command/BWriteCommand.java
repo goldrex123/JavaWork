@@ -20,10 +20,16 @@ public class BWriteCommand implements BCommand {
 //		int result = dao.insert(dto);
 //		model.addAttribute("result", result);
 		
+		System.out.println("생성 uid" + dto.getUid());
+		
 		//mybatis
 		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-//		model.addAttribute("result",dao.insert(dto));
-		model.addAttribute("result",dao.insert(dto.getSubject(), dto.getContent(), dto.getName()));
+		System.out.println("생성 uid2 " + dto.getUid());
+		
+		model.addAttribute("result",dao.insert(dto));
+		System.out.println("생성된  uid는 " + dto.getUid());
+		
+//		model.addAttribute("result",dao.insert(dto.getSubject(), dto.getContent(), dto.getName()));
 		
 	}
 

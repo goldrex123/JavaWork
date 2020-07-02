@@ -21,8 +21,8 @@ public class BUpdateCommand implements BCommand {
 //		model.addAttribute("result", cnt);
 		
 		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-		model.addAttribute("result", dao.update(dto));
-		System.out.println(dao.update(dto));
+//		model.addAttribute("result", dao.update(dto));
+		model.addAttribute("result", dao.update(dto.getUid(), dto));
 	}
 
 }
