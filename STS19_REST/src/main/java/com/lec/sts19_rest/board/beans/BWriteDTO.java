@@ -1,7 +1,6 @@
 package com.lec.sts19_rest.board.beans;
 
-import java.sql.Date;
-import java.text.DateFormat;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 public class BWriteDTO {
@@ -10,12 +9,12 @@ public class BWriteDTO {
 	private String content;   //wr_content
 	private String name;  // wr_name
 	private int viewCnt;   // wr_viewcnt
-	private Date regDate;   // wr_regdate
+	private Timestamp regDate;   // wr_regdate
 	
 	public BWriteDTO() {
 		super();
 	}
-	public BWriteDTO(int uid, String subject, String content, String name, int viewCnt, Date regDate) {
+	public BWriteDTO(int uid, String subject, String content, String name, int viewCnt, Timestamp regDate) {
 		super();
 		this.uid = uid;
 		this.subject = subject;
@@ -57,10 +56,10 @@ public class BWriteDTO {
 		this.viewCnt = viewCnt;
 	}
 	public String getRegDate() {
-		DateFormat format1 = DateFormat.getDateInstance(DateFormat.FULL);
-		return format1.format(regDate);
+		String timeStamp = new SimpleDateFormat("yyyy년MM월dd일 HH시mm분ss초").format(regDate);
+		return timeStamp;
 	}
-	public void setRegDate(Date regDate) {
+	public void setRegDate(Timestamp regDate) {
 		this.regDate = regDate;
 	}
 }
