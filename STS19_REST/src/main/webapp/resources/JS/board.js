@@ -10,11 +10,12 @@ $(document).ready(function(){
 	$("#btnWrite").click(function(){
 		setPopup("write");
 		$("#dlg_write").show();
-	});
+	});	
 	
 	// 모달 대화상자에서 close 버튼 누르면 닫기
 	$(".modal .close").click(function(){
 		$(this).parents(".modal").hide();
+		loadPage(page);
 	});
 	
 	// 글작성  submit 되면
@@ -53,7 +54,6 @@ $(document).ready(function(){
 
 // page 번째 페이지 로딩
 function loadPage(page){
-	
 	$.ajax({
 		url : "list.ajax?page=" + page + "&pageRows=" + pageRows
 		, type : "GET"
@@ -76,7 +76,6 @@ function loadPage(page){
 // 
 function updateList(jsonObj){
 	result = ""; 
-	
 	if(jsonObj.status == "OK"){
 		
 		var count = jsonObj.count;
@@ -87,14 +86,15 @@ function updateList(jsonObj){
 		
 		var i;
 		var items = jsonObj.data;   // 배열
+		console.log(items[0].regDate);
 		for(i = 0; i < count; i++){
 			result += "<tr>\n";
 			result += "<td><input type='checkbox' name='uid' value='" + items[i].uid + "'></td>\n";
 			result += "<td>" + items[i].uid + "</td>\n";
 			result += "<td><span class='subject' data-uid='" + items[i].uid + "'>" + items[i].subject + "</span></td>\n";
 			result += "<td>" + items[i].name + "</td>\n";
-			result += "<td><span data-viewcnt='" + items[i].uid + "'>" + items[i].viewcnt + "</span></td>\n";
-			result += "<td>" + items[i].regdate + "</td>\n";			
+			result += "<td><span data-viewcnt='" + items[i].uid + "'>" + items[i].viewCnt + "</span></td>\n";
+			result += "<td>" + items[i].regDate + "</td>\n";			
 			result += "</tr>\n";
 		} // end for
 		$("#list tbody").html(result);  // 테이블 업데이트!
@@ -329,8 +329,8 @@ function setPopup(mode){
 		$("#dlg_write .btn_group_view").show();
 		$("#dlg_write .btn_group_update").hide();
 		
-		$("#dlg_write #viewcnt").text("#" + viewItem.uid + " - 조회수: " + viewItem.viewcnt);
-		$("#dlg_write #regdate").text(viewItem.regdate);
+		$("#dlg_write #viewcnt").text("#" + viewItem.uid + " - 조회수: " + viewItem.viewCnt);
+		$("#dlg_write #regdate").text(viewItem.regDate);
 		
 		$("#dlg_write input[name='uid']").val(viewItem.uid);  // 나중에 삭제/수정을 위해 필요
 		

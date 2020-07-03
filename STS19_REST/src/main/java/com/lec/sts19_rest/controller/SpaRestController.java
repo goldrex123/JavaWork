@@ -1,41 +1,68 @@
 package com.lec.sts19_rest.controller;
 
-import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lec.sts19_rest.board.C;
 import com.lec.sts19_rest.board.beans.BWriteDTO;
-import com.lec.sts19_rest.board.beans.EmployeeListVO;
-import com.lec.sts19_rest.board.beans.EmployeeVO;
 import com.lec.sts19_rest.board.beans.IWriteDAO;
+import com.lec.sts19_rest.board.command.AjaxListCommand;
+import com.lec.sts19_rest.board.command.AjaxResultCommand;
+import com.lec.sts19_rest.board.command.DeleteCommand;
+import com.lec.sts19_rest.board.command.ListCommand;
+import com.lec.sts19_rest.board.command.UpdateCommand;
+import com.lec.sts19_rest.board.command.ViewCommand;
+import com.lec.sts19_rest.board.command.WriteCommand;
 
 @RestController
 public class SpaRestController{
 	
-	
-	@RequestMapping("/helloJSON")
-	public BWriteDTO helloJSON() {
-		BWriteDTO dto = new BWriteDTO(100, "하이여", "REST", "JSON이다!" , 123	, new Timestamp(10000));
-		
-		return dto;
-	}
-	
 	// JSON 데이터 <-- 자바 list<>
 	@RequestMapping("/list.ajax")
-	public List<BWriteDTO> listJSON(){
-		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
+	public void listJSON(HttpServletRequest request, HttpServletResponse response){
+		new ListCommand().execute(request, response);
+		new AjaxListCommand().execute(request, response);
 		
-		return dao.select();
+		
 	}
 	
+	@RequestMapping("/view.ajax")
+	public void viewJSON(HttpServletRequest request, HttpServletResponse response){
+		new ViewCommand().execute(request, response);
+		new AjaxListCommand().execute(request, response);
+		
+	}
+	
+	@RequestMapping("/writeOk.ajax")
+	public void writeJSON(HttpServletRequest request, HttpServletResponse response){
+		
+		new WriteCommand().execute(request, response);
+		new AjaxListCommand().execute(request, response);
+		
+	}
+	
+	@RequestMapping("/updateOk.ajax")
+	public void updateJSON(HttpServletRequest request, HttpServletResponse response){
+		
+		new UpdateCommand().execute(request, response);
+		new AjaxResultCommand().execute(request, response);
+		
+	}
+	
+	@RequestMapping("/deleteOk.ajax")
+	public void deleteJSON(HttpServletRequest request, HttpServletResponse response){
+		
+		new DeleteCommand().execute(request, response);
+		new AjaxResultCommand().execute(request, response);
+		
+	}
 	
 	// json 데이터 <-- 자바 배열
 	@RequestMapping("/arrJSON")

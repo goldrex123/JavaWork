@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lec.sts19_rest.board.C;
+import com.lec.sts19_rest.board.beans.AjaxWriteList;
 import com.lec.sts19_rest.board.beans.BWriteDTO;
 import com.lec.sts19_rest.board.beans.EmployeeListVO;
 import com.lec.sts19_rest.board.beans.EmployeeVO;
@@ -26,12 +27,12 @@ public class MyRestController {
 		return "Hello REST";
 	}
 	
-	@RequestMapping("/helloJSON")
-	public BWriteDTO helloJSON() {
-		BWriteDTO dto = new BWriteDTO(100, "하이여", "REST", "JSON이다!" , 123	, new Timestamp(10000));
-		
-		return dto;
-	}
+//	@RequestMapping("/helloJSON")
+//	public BWriteDTO helloJSON() {
+//		BWriteDTO dto = new BWriteDTO(100, "하이여", "REST", "JSON이다!" , 123	, new Timestamp(10000));
+//		
+//		return dto;
+//	}
 	
 	// JSON 데이터 <-- 자바 list<>
 	@RequestMapping("/listJSON")
@@ -73,6 +74,11 @@ public class MyRestController {
 	@RequestMapping("/helloXML")
 	public EmployeeVO helloXML() {
 		return new EmployeeVO(100, "홍길동", 200, new int[] {10,20,30}, 34.2);
+	}
+	
+	@RequestMapping("/hellojs")
+	public AjaxWriteList hellojs() {
+		return new AjaxWriteList();
 	}
 	
 	// xml 데이터 <-- 자바 List<>
