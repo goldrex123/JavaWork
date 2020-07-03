@@ -29,8 +29,6 @@ public class SpaRestController{
 	public void listJSON(HttpServletRequest request, HttpServletResponse response){
 		new ListCommand().execute(request, response);
 		new AjaxListCommand().execute(request, response);
-		
-		
 	}
 	
 	@RequestMapping("/view.ajax")
@@ -62,33 +60,6 @@ public class SpaRestController{
 		new DeleteCommand().execute(request, response);
 		new AjaxResultCommand().execute(request, response);
 		
-	}
-	
-	// json 데이터 <-- 자바 배열
-	@RequestMapping("/arrJSON")
-	public BWriteDTO[] arrJSON(){
-		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-		
-		List<BWriteDTO> list = dao.select();
-		BWriteDTO[] arr = new BWriteDTO[list.size()];
-		
-		return list.toArray(arr);
-	}
-	
-	//JSON 데이터 <-- 자바 Map<k,v>
-	@RequestMapping("/mapJSON")
-	public Map<Integer, BWriteDTO> mapJSON(){
-		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-		
-		List<BWriteDTO> list = dao.select();
-		
-		Map<Integer, BWriteDTO> map = new HashMap<Integer, BWriteDTO>();
-		
-		for(BWriteDTO dto : list) {
-			map.put(dto.getUid(), dto);
-		}
-		
-		return map;
 	}
 }
 
