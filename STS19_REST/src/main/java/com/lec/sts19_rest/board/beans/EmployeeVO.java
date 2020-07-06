@@ -4,23 +4,26 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "employee") // <-- <employee>라는 태그로 만들어짐 
+@XmlRootElement(name = "employee")   // <employee>
 public class EmployeeVO {
-	@XmlAttribute // "id" attribute
+	@XmlAttribute		// "id" attribute
 	private Integer id;
 	
-	@XmlElement  // <name> element
+	@XmlElement         // <name> element
 	private String name;
 	
-	@XmlElement // <age> element
+	@XmlElement			// <age> element
 	private int age;
 	
-	@XmlElement // <score> elements
+	@XmlElement			// <score> elements !
 	private int[] score;
 	
-	// 어노테이션 없으면 xml 변환에 포함 안됨
+	// 어노테이션 없느면 XML변환에 포함 안됨.
 	private double point;
 	
+	public EmployeeVO() {
+		super();
+	}
 	public EmployeeVO(Integer id, String name, int age, int[] score, double point) {
 		super();
 		this.id = id;
@@ -30,11 +33,8 @@ public class EmployeeVO {
 		this.point = point;
 	}
 	
-	public EmployeeVO() {
-		super();
-	}
-
-	//getter 만 제공 : read-only 속성 , immutable
+	// getter 만 제공 : read-only 속성, immutable
+	
 	public Integer getId() {
 		return id;
 	}
@@ -52,4 +52,13 @@ public class EmployeeVO {
 	}
 	
 	
+	
 }
+
+
+
+
+
+
+
+

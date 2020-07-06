@@ -4,3 +4,5 @@
 	alert('트랜잭션 에러 발생.  이전페이지로 돌아갑니다');
 	history.back();
 </script>
+
+

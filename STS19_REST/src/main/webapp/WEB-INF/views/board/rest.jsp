@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/resources/CSS/common.css"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/CSS/common.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="${pageContext.request.contextPath }/resources/JS/board.js"></script>
+<script src="${pageContext.request.contextPath }/JS/board.js"></script>
+
 <title>SPA 게시판</title>
 </head>
 <body>
@@ -48,6 +49,8 @@
 			<button type="button" id="btnWrite" class="btn success">글작성</button>
 		</div>	
 	</div>
+
+
 </div>
 
 <br>
@@ -66,7 +69,7 @@
       
       <span class="close" title="Close Modal">&times;</span>
       
-      <input type="hidden" name="uid"> <!-- 삭제나 수정에 필요함 -->
+      <input type="hidden" name="uid">  <%-- 삭제나 수정 위해 필요 --%>      
       
       <div class="d01 btn_group_header">
       	<div class="left">
@@ -87,29 +90,35 @@
       <label for="content"><b>내용</b></label>
       <textarea placeholder="글내용" name="content"></textarea>
       
-      <div class="d01 btn_group_write">  
-      	<button type="submit" class="btn success fullbtn">작성</button>
-      </div>
+      <div class="d01 btn_group_write">
+	      <button type="submit" class="btn success fullbtn">작성</button>
+      </div>  
       
       <div class="d01 btn_group_view">
-      	<div class="left">
-      		<button type="button" class="btn danger" id="viewDelete">삭제</button>
-      	</div>
-      	<div class="right">
-      		<button type="button" class="btn info" id="viewUpdate">수정</button>
-      	</div>
-      	<div class="clear"></div>
+			<div class="left">
+				<button type='button' class="btn danger" id="viewDelete">삭제</button>
+			</div>
+			<div class="right">
+				<button type='button' class="btn info" id="viewUpdate">수정</button>
+			</div>
+			<div class="clear"></div>
       </div>
       
       <div class="d01 btn_group_update">
-      	<div>
-      		<button type="button" class="btn info fullbtn" id="updateOk">수정완료</button>
-      	</div>
+      		<div>
+      			<button type="button" class="btn info fullbtn" id="updateOk">수정완료</button>
+      		</div>
       </div>
       
     </div>
   </form>
 </div>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

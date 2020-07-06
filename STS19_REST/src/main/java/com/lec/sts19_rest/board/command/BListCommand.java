@@ -12,15 +12,24 @@ public class BListCommand implements BCommand {
 //		BWriteDAO dao = new BWriteDAO();
 //		List<BWriteDTO> list = dao.select();
 //		model.addAttribute("list", list);
-		
-		//Mybatis 사용
-		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-		model.addAttribute("list",dao.select());
-		
 
+		// MyBatis 사용
+		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
+		model.addAttribute("list", dao.select());
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

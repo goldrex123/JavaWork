@@ -1,21 +1,20 @@
 package com.lec.sts19_rest.board.beans;
 
 public class AjaxWriteResult {
-	int count; // 데이터 개수
-	String status; // 처리 결과 
-	String message; // 결과 메세지
+	private int count;   // 데이터 개수
+	private String status;  // 처리 결과
+	private String message;  // 결과 메세지
 	
 	/*
-	 {
-	 	count : ...,
-	 	status : ...,
-	  	message : ...
-	 } 
+	{
+		count : ○○○,
+		status : ○○○,
+		message : ○○○
+	}
 	 */
 	
-	public AjaxWriteResult() {
-		super();
-	}
+	public AjaxWriteResult() {}
+	
 	public int getCount() {
 		return count;
 	}
@@ -34,6 +33,7 @@ public class AjaxWriteResult {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
+	
+	
 	
 }

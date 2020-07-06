@@ -16,20 +16,21 @@ public class BWriteCommand implements BCommand {
 		// Model 안에 있는 값(attribute) 꺼내기
 		Map<String, Object> map = model.asMap();
 		BWriteDTO dto = (BWriteDTO)map.get("dto");
+
 //		BWriteDAO dao = new BWriteDAO();
 //		int result = dao.insert(dto);
 //		model.addAttribute("result", result);
 		
-		System.out.println("생성 uid" + dto.getUid());
-		
-		//mybatis
+		// MyBatis 사용
 		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-		System.out.println("생성 uid2 " + dto.getUid());
+		model.addAttribute("result", dao.insert(dto));
 		
-		model.addAttribute("result",dao.insert(dto));
-		System.out.println("생성된  uid는 " + dto.getUid());
+		System.out.println("생성된 uid 는 " + dto.getUid());
 		
-//		model.addAttribute("result",dao.insert(dto.getSubject(), dto.getContent(), dto.getName()));
+		//model.addAttribute("result",
+		//		dao.insert(dto.getSubject(), dto.getContent(), dto.getName()));
+		
+		
 		
 	}
 
