@@ -46,6 +46,7 @@ public class File11Main {
 			
 			fw.write(str); // 저장은 시스템 인코딩 상태에 따라 저장됨.
 							// UTF-8 인코딩의 경우, 한글은 글자당 3바이트, 영문은 1바이트로 저장
+			fw.write("\n");
 			fw.write(charArr);
 			fw.flush(); //write() 호출 후에는 flush() 하여 출력 버퍼의 데이터가 완전히 출력 되도록 한다.
 			
